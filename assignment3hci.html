@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HIC ASSIGNMENT 3</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+<div class="container container1">
+  <h1>My Portfolio</h1>
+  <div class="button-container">
+  <button data-target="about-me" id="about-me">About Me</button>
+  <button data-target="education" id="education">Education</button>
+  <button data-target="skills" id="skills">Skills and Experience</button>
+</div>
+</header>
+<section id="about-me">
+  <h2 class="h2abme">About Me</h2>
+  <div class="container container2">
+    <p style="margin-right: 5%; text-align: justify;margin-left: 5%;
+    font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#76493D;flex-grow: 1;">
+    I am a first year student at Binus Senayan, in the International Computer Science Major. 
+      I live in with my family in Kebayoran Baru. I have 2 older sisters and am the youngest 
+      daughter. I have 5 cats and 2 dogs. I joined the Computer Sciene Major because 
+      I am interested in working as a video game developer. My hobbies include cooking,
+    playing video games, and drawing.</p>
+    <img src="IMG_9702.jpg" alt="">
+  </div>
+</section>
+<section id="education">
+  <h2 style="margin-left: 5%;">Education</h2>
+  <div class="edu">
+    <button type="button" class="collapsible">Elementary</button>
+    <div class="content">
+      <img src="elementary.png">
+    </div>
+    <button type="button" class="collapsible">Middle School</button>
+    <div class="content">
+      <img src="midschool.png">
+    </div>
+    <button type="button" class="collapsible">High School</button>
+    <div class="content">
+      <img src="highschool.png">
+    </div>
+    <button type="button" class="collapsible">University</button>
+    <div class="content">
+      <img src="binus.png">
+    </div>
+  </div>
+</section>
+<section id="skills">
+<h2 style="text-align: right; margin-right: 5%;">Skills and Experience</h2>
+<div class="grid-container">
+  <div class="grid-item">
+      <p>Organizational</p>
+      <ul>
+        <li>President of High School Student Council</li>
+        <li>Secretary of RoboGals</li>
+      </ul>
+  </div>
+  <div class="grid-item">
+      <p>Soft Skills</p>
+      <ul>
+        <li>Microsoft Word</li>
+        <li>Microsoft Excel</li>
+      </ul>
+  </div>
+  <div class="grid-item">
+      <p>Programming</p>
+      <ul>
+        <li>Python</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+  </div>
+  <div class="grid-item">
+      <p>Design</p>
+      <ul>
+        <li>Canva</li>
+        <li>Digital Illustration</li>
+      </ul>
+  </div>
+</section>
+<div class="contacts">
+  <footer>
+    <table id="footer" border="0" width="100%"
+    cellpadding="0" cellspacing="0" bgcolor="#EEAA94">
+    <tr>
+        <td>
+            <table border="0" cellpadding="15"
+                cellspacing="0" width="60%" align="center">
+                <tr>
+                    <td width="auto" valign="top">
+                        <a href="" style="font-weight:bold;">
+                          LinkedIn
+                        </a>
+                    </td>
+                    <td>
+                        |
+                    </td>
+                    <td width="auto" valign="top">
+                        <a href="https://www.instagram.com/ally.fsr/?hl=en" style="font-weight:bold;">
+                            Instagram
+                        </a>
+                    </td>
+
+                    <td>
+                        |
+                    </td>
+
+                    <td width="auto" valign="top">
+                        <b>Email: almira.rana@binus.ac.id</b>
+                    </td>
+
+                    <td>
+                        |
+                    </td>
+
+                    <td width="auto" valign="top">
+                        <b>WhatsApp: +62 8123456789</b>
+                    </td>
+
+                    <td>
+                        |
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</footer>
+</div>
+
+  <script>
+    
+const scrollButtonAbMe = document.querySelector("[data-target='about-me']");
+const scrollToSectionAbMe = document.getElementById("about-me");
+scrollButtonAbMe.addEventListener("click", function () {
+    console.log("about-me Button clicked");
+    scrollToSectionAbMe.scrollIntoView({ behavior: "smooth" });
+});
+
+const scrollButtonEd = document.querySelector("[data-target='education']");
+const scrollToSectionEd = document.getElementById("education");
+scrollButtonEd.addEventListener("click", function () {
+    console.log("education Button clicked");
+    scrollToSectionEd.scrollIntoView({ behavior: "smooth" });
+});
+
+const scrollButtonSk = document.querySelector("[data-target='skills']");
+const scrollToSectionSk = document.getElementById("skills");
+scrollButtonSk.addEventListener("click", function () {
+    console.log("skills Button clicked");
+    scrollToSectionSk.scrollIntoView({ behavior: "smooth" });
+});
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+  </script>
+</body>
+</html>
