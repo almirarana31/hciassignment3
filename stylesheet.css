@@ -1,3 +1,8 @@
+* {
+  color:#76493D;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 body, html {
   height:100%;
   margin: 0;
@@ -5,31 +10,11 @@ body, html {
 }
 
 button {
-  position: relative;
-  background: transparent;
-  padding: 15px 45px;
-  border-radius: 15px;
-  border: none;
-  font-size: 20px;
-  color:#76493D;
-  font-weight: 500;
-  cursor: pointer;
-  overflow: hidden;
-  z-index: 1;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 button:active {
   transform: scale(0.95)
-}
-
-button::before {
-  content: '';
-  position: absolute;
-  inset: -3px 50px;
-  background: #76493D;
-  transition: inset 350ms ease;
-  z-index: -1;
 }
 
 button:hover::before{
@@ -42,7 +27,6 @@ button::after {
   position: absolute;
   inset: 3px;
   border-radius: 10px;
-  background: #EEAA94;
   z-index: -1;
 }
 
@@ -67,7 +51,6 @@ button::after {
   align-items: center; 
   position: relative;
 }
-
   
 img {
   max-width: 40%;
@@ -90,8 +73,8 @@ h1 {
 }
 
 .img2 {
-  max-width: 70%; /* Optional: Limit the image width to its original size */
-  max-height: 70%; /* Optional: Limit the image height to its original size */
+  max-width: 70%;
+  max-height: 70%; 
 }
 
 h2 {
