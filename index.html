@@ -98,7 +98,42 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-    // Your JavaScript code remains unchanged.
+    const scrollButtonAbMe = document.querySelector("[data-target='about-me']");
+const scrollToSectionAbMe = document.getElementById("about-me");
+scrollButtonAbMe.addEventListener("click", function () {
+    console.log("about-me Button clicked");
+    scrollToSectionAbMe.scrollIntoView({ behavior: "smooth" });
+});
+
+const scrollButtonEd = document.querySelector("[data-target='education']");
+const scrollToSectionEd = document.getElementById("education");
+scrollButtonEd.addEventListener("click", function () {
+    console.log("education Button clicked");
+    scrollToSectionEd.scrollIntoView({ behavior: "smooth" });
+});
+
+const scrollButtonSk = document.querySelector("[data-target='skills']");
+const scrollToSectionSk = document.getElementById("skills");
+scrollButtonSk.addEventListener("click", function () {
+    console.log("skills Button clicked");
+    scrollToSectionSk.scrollIntoView({ behavior: "smooth" });
+});
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
   </script>
 </body>
 </html>
